@@ -14,7 +14,18 @@
 
 <div class="container">
  
-  <form action=>
+ 
+  	<c:if test="${not empty msg}">
+		
+		
+ 
+			<div class="row">
+				<div class="col-xs-12 col-md-offset-2 col-md-8">
+					<div class="alert alert-info fade in">${msg}</div>
+				</div>
+			</div>
+		</c:if>
+		 <form action= "/FrontEndSmartShopping/category" method="post">
     <div class="form-group">
       <label for="cid">Category ID:</label>
       <input type="text" class="form-control" id="cid" placeholder="Enter Id" name="cid">

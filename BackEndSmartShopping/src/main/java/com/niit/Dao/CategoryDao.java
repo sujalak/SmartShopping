@@ -7,7 +7,7 @@ import com.niit.Model.Category;
 public interface CategoryDao {
 	// get all categories
 
-		public List<Category>listCategory();
+		public List<Category>listCategories();
 
 		// create category
 

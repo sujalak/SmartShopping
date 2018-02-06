@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -15,9 +16,8 @@ import org.springframework.stereotype.Component;
 @Table(name = "Supplier")
 public class Supplier implements Serializable {
 	@Id
-	
-String sid;
-	
+	String sid;
+	@NotBlank(message="please enter supplier Name")
 	String supplierName;
 
 	public String getSid() {

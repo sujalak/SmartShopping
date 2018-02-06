@@ -26,7 +26,7 @@ public class CategoryDaoImpl implements CategoryDao {
 
         return sessionFactory.getCurrentSession();
     }
-	public List<Category> listCategory() {
+	public List<Category> listCategories() {
 		return sessionFactory.getCurrentSession().createQuery("from Category").list();
 	}
 

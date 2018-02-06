@@ -17,6 +17,14 @@ public class CategoryController {
 	private Category category;
 	
 	
+	public String listCategories(Model model) {
+		
+		model.addAttribute("category", category);
+		model.addAttribute("categoryList", categoryDao.listCategories());
+		model.addAttribute("isAdminClickedCategories", "true");
+	
+		return "/home";
+	}
 	
 	
 
@@ -30,7 +38,7 @@ public class CategoryController {
 			model.addAttribute("msg", "not able created/updated the caetgory");
 		}
 		model.addAttribute("category", category);
-		model.addAttribute("categoryList", categoryDao.listCategory());
+		model.addAttribute("categoryList", categoryDao.listCategories());
 		model.addAttribute("isAdminClickedCategories", "true");
 		
 		return "/category";

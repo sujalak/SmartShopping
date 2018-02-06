@@ -13,7 +13,7 @@
 <body>
 
 <div class="container">
-  <h2>Dynamic Tabs</h2>
+  <h2>Admin</h2>
   <ul class="nav nav-tabs nav-justified"">
     <li class="active"><a data-toggle="tab" href="#Product">Product</a></li>
     <li><a data-toggle="tab" href="#menu1">Category</a></li>
@@ -31,9 +31,13 @@
      <%@include file="category.jsp" %>
     </div>
     <div id="menu2" class="tab-pane fade">
+  <c:if test="${isUserClickedSupplier==true}">
+<jsp:include page="supplier.jsp"></jsp:include> 
+</c:if>
+    
       <%@include file="supplier.jsp" %>
     </div>
-   
+
   </div>
 </div>
 

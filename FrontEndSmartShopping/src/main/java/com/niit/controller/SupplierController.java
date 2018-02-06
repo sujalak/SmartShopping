@@ -1,5 +1,7 @@
 package com.niit.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,23 +13,23 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.Dao.SupplierDao;
+import com.niit.Model.Category;
 import com.niit.Model.Supplier;
 
 @Controller
+
 public class SupplierController {
 	@Autowired
 	private SupplierDao supplierDao;
+	@Autowired
+	private Supplier supplier;
 	
-	/*@RequestMapping(value="/addSupplier", method=RequestMethod.GET)
-	public ModelAndView showSupplier(){
-		ModelAndView mv =new ModelAndView("/supplier");
-		return mv;
-		
-		}*/
-		
+	
+
+	
 //Storing supplier data
 	@RequestMapping(value="/supplier", method=RequestMethod.POST)
-	public  String insertSupplier(@ModelAttribute("supplier") Supplier msupplier,BindingResult result,Model model) {
+	public  String insertSupplier(@Valid @ModelAttribute("supplier") Supplier msupplier,BindingResult result,Model model) {
 		
 		
 		if(supplierDao.insertSupp(msupplier)==true)

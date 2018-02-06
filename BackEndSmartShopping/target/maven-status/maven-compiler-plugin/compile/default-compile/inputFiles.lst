@@ -3,7 +3,10 @@ D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Dao\Suppli
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Model\User.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Model\Category.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Model\Supplier.java
+D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\DaoImpl\ProductDaoImpl.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Dao\UserDao.java
+D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Model\Product.java
+D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Dao\ProductDao.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\DaoImpl\CategoryDaoImpl.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\DaoImpl\UserDaoImpl.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\config\HibernateConfig.java
