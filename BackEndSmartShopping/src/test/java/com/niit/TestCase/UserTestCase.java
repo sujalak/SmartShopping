@@ -38,15 +38,15 @@ public class UserTestCase {
 	@Test
 	public void insertUserTestCase()
 	{
-	    // user.setUserId("1");
+	   
 		 user.setEmail("xyz@gmail.com");
 		 user.setName("xyz");
 		 user.setAddress("mumbai");
 		 user.setPassword("niit@123");
 		 user.setPhone("69865422");
-		 user.setCountry("country");
+		 user.setRole("ROLE_USER");
 		 boolean flag=userDao.save(user);
-		 //compare what you are excepting VS what you are getting from save method
+		
 		 System.out.println("db connected");
 		 Assert.assertEquals( "insertUserTestCase" ,true, flag);
 		

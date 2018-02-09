@@ -14,32 +14,13 @@ import org.springframework.stereotype.Component;
 @Table(name="User")
 public class User implements Serializable{
 	@Id
-	   @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String userId;
 	private String email;
-	
-	
 	private String name;
-	private String phone;
-	private String	address;
 	private String	password;
-	private String	country;
-	
-	public String getUserId() {
-		return userId;
-	}
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	/*public User(String email, String name, String phone, String address, String password, String country) {
-	
-		this.email = email;
-		this.name = name;
-		this.phone = phone;
-		this.address = address;
-		this.password = password;
-		this.country = country;
-	}*/
+	private String	address;
+	private String phone;
+	private String role;
+	private boolean enabled;
 	public String getEmail() {
 		return email;
 	}
@@ -52,12 +33,11 @@ public class User implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public String getPhone() {
-		return phone;
+	public String getPassword() {
+		return password;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getAddress() {
 		return address;
@@ -65,23 +45,25 @@ public class User implements Serializable{
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getPassword() {
-		return password;
+	public String getPhone() {
+		return phone;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	public String getCountry() {
-		return country;
+	public String getRole() {
+		return role;
 	}
-	public void setCountry(String country) {
-		this.country = country;
+	public void setRole(String role) {
+		this.role = role;
 	}
-	@Override
-	public String toString() {
-		return "User [email=" + email + ", name=" + name + ", phone=" + phone + ", address=" + address + ", password="
-				+ password + ", country=" + country + "]";
+	public boolean isEnabled() {
+		return enabled;
 	}
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+	
 	
 	
 }

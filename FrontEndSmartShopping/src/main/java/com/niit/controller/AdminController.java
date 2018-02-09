@@ -13,8 +13,8 @@ import com.niit.Dao.SupplierDao;
 import com.niit.Model.Category;
 import com.niit.Model.Product;
 import com.niit.Model.Supplier;
-@Controller
 
+@Controller
 public class AdminController {
 	@Autowired
 	private Product product;
@@ -36,27 +36,13 @@ public class AdminController {
 	private ProductDao productDao;
 
 	
-	//http://localhost:8080/ShoppingCart/manageCategories
-	//<a href="/manageCategories">  </a>
-	//id, name, description
-	@RequestMapping("manageCategories")
-	public ModelAndView categories() {
-		
-		ModelAndView mv = new ModelAndView("Admin");
-		mv.addObject("category", category);
-		mv.addObject("isAdminClickedCategories", "true");
-		mv.addObject("categoryList", categoryDao.listCategories());
-		
-		return mv;
-	}
-
-	//id, name price, category_id, supplier_id
-	@RequestMapping("/manageProducts")
-	public ModelAndView products() {
+	
+	@RequestMapping("/Admin")
+	public ModelAndView showAdmin() {
 		
 		ModelAndView mv = new ModelAndView("Admin");
 		
-		mv.addObject("isAdminClickedProducts", "true");
+		System.out.println("in admin");
 		mv.addObject("product", product);
 		mv.addObject("productList", productDao.listProduct());
 		mv.addObject("category", category);
@@ -67,18 +53,7 @@ public class AdminController {
 		return mv;
 	}
 
-	//id, name, address
-	@RequestMapping("/manageSuppliers")
-	public ModelAndView suppliers() {
 		
-		ModelAndView mv = new ModelAndView("Admin");
-		mv.addObject("supplier", supplier);
-		mv.addObject("isAdminClickedSuppliers", "true");
-		mv.addObject("supplierList", supplierDao.listSupplier());
-		
-		return mv;
-	}
-	
 	
 	
 	

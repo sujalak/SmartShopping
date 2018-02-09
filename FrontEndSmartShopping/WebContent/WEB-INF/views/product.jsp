@@ -1,197 +1,237 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-
-    pageEncoding="ISO-8859-1"%>
-     <%@page isELIgnored="false" %>
+	pageEncoding="ISO-8859-1"%>
+<%@page isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<!DOCTYPE html>
 <html>
 
 <head>
 
- <meta charset="utf-8">
+<meta charset="utf-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
 
-<form class="form-horizontal">
-<form:form action="" role="form" commandName="product" enctype="multipart/form-data">
-<fieldset>
+	<c:if test="${not empty msg}">
 
 
 
+		<div class="row">
+			<div class="col-xs-12 col-md-offset-2 col-md-8">
+				<div class="alert alert-info fade in">${msg}</div>
+			</div>
+		</div>
+	</c:if>
+	<form action="/FrontEndSmartShopping/product" method="post"
+		class="form-horizontal" enctype="multipart/form-data">
 
-<!-- Form Name -->
 
 
 
-<!-- Text input-->
 
-<div class="form-group">
+		<!-- Form Name -->
 
-  <label class="col-md-4 control-label" for="product_id">PRODUCT ID</label>  
 
-  <div class="col-md-4">
 
-  <input id="product_id" name="product_id" placeholder="PRODUCT ID" class="form-control input-md" required="" type="text">
+		<!-- Text input-->
 
-    
+		<div class="form-group">
 
-  </div>
+			<label class="col-md-4 control-label" for="product_id">Product
+				Id</label>
 
-</div>
+			<div class="col-md-4">
 
+				<input id="product_id" name="product_id" placeholder="Product Id"
+					class="form-control input-md" required type="text">
 
 
 
-<!-- Text input-->
+			</div>
 
-<div class="form-group">
+		</div>
 
-  <label class="col-md-4 control-label" for="product_name">PRODUCT NAME</label>  
 
-  <div class="col-md-4">
 
-  <input id="product_name" name="product_name" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text">
 
-    
+		<!-- Text input-->
 
-  </div>
+		<div class="form-group">
 
-</div>
+			<label class="col-md-4 control-label" for="product_name">Product
+				Name</label>
 
+			<div class="col-md-4">
 
+				<input id="product_name" name="product_name"
+					class="form-control input-md" type="text"
+					placeholder="Product Name" required>
 
 
-<!-- Text input-->
 
-<div class="form-group">
+			</div>
 
-  <label class="col-md-4 control-label" for="product_name_fr">PRODUCT DESCRIPTION FR</label>  
+		</div>
 
-  <div class="col-md-4">
 
-  <input id="product_name_fr" name="product_name_fr" placeholder="PRODUCT DESCRIPTION FR" class="form-control input-md" required="" type="text">
 
-    
 
-  </div>
+		<!-- Text input-->
 
-</div>
+		<div class="form-group">
 
+			<label class="col-md-4 control-label" for="product_name_fr">Product
+				Description </label>
 
+			<div class="col-md-4">
 
+				<input id="product_name_fr" name="product_name_fr"
+					placeholder="Product Description " class="form-control input-md"
+					required type="text">
 
-<!-- Select Basic -->
 
-<div class="form-group">
 
-  <label class="col-md-4 control-label" for="categorie">PRODUCT CATEGORY</label>
-   <c:forEach var="category" items="${categoryList}">
+			</div>
 
-  <div class="col-md-4">
+		</div>
 
+		<div class="form-group">
 
-  <select  class="form-control">
-  <option>${category.cname}</option>
-   
-    </select>
+			<label class="col-md-4 control-label" for="product_price">Product
+				Price</label>
 
-  </div>
-  </c:forEach>
+			<div class="col-md-4">
 
-</div>
+				<input id="product_price" name="productprice"
+					placeholder="Product Price" class="form-control input-md" required
+					type="text">
 
-<div class="form-group">
 
-  <label class="col-md-4 control-label" for="suppliers">PRODUCT Supplier</label>
-<c:forEach var="supplier" items="${supplierList}">
 
-  <div class="col-md-4">
+			</div>
 
+		</div>
 
-  <select  class="form-control">
-  <option>${suppplier.supplierName}</option>
-   
-    </select>
+		<div class="form-group">
 
-  </div>
-  </c:forEach>
+			<label class="col-md-4 control-label" for="product_stock">Product
+				Stock</label>
 
-  <div class="col-md-4">
+			<div class="col-md-4">
 
-    <select id="suppliers" name="suppliers" class="form-control">
+				<input id="product_stock" name="produc_stock"
+					placeholder="Product Stock" class="form-control input-md" required
+					type="text">
 
-    <option></option>
 
-    </select>
 
-  </div>
+			</div>
 
-</div>
+		</div>
 
 
 
+		<!-- Select Basic -->
 
+		<div class="form-group">
 
+			<label class="col-md-4 control-label" for="categorie">Product
+				Category</label>
 
 
+			<div class="col-md-4">
 
 
+				<select class="form-control">
+					<c:forEach var="category" items="${categoryList}">
+						<option>${category.cname}</option>
+					</c:forEach>
+				</select>
 
- <!-- File Button --> 
+			</div>
 
-<div class="form-group">
 
-  <label class="col-md-4 control-label" for="filebutton">Product image</label>
+		</div>
 
-  <div class="col-md-4">
+		<div class="form-group">
 
-    <input id="filebutton" name="filebutton" class="input-file" type="file">
+			<label class="col-md-4 control-label" for="suppliers">Product
+				Supplier</label>
 
-  </div>
 
-</div>
+			<div class="col-md-4">
 
-<!-- Button -->
 
-<div class="form-group">
+				<select class="form-control">
+					<c:forEach var="supplier" items="${supplierList}">
+						<option>${supplier.supplierName}</option>
+					</c:forEach>
+				</select>
 
+			</div>
 
 
+			<div class="col-md-4"></div>
 
-  <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+		</div>
 
-  <div class="col-md-4">
 
-    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
 
-  </div>
 
- 
 
-    <button id="submit" name="submit" class="btn btn-primary">Button</button>
 
-  </div>
 
-  </div>
 
-</fieldset>
 
 
+		<!-- File Button -->
 
+		<div class="form-group">
 
-</form:form>
+			<label class="col-md-4 control-label" for="filebutton">Product
+				image</label>
+
+			<div class="col-md-4">
+
+				<input id="file" name="file" class="input-file" type="file">
+
+			</div>
+
+		</div>
+
+		<!-- Button -->
+
+		
+
+
+
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-4">
+
+						<button id="submitbutton" name="submit" class="btn btn-primary">Submit</button>
+
+
+
+						<button id="cancelbutton" name="cancel" class="btn btn-warning">Cancel</button>
+
+					</div>
+				</div>
+				</div>
+	</form>
 
 
 

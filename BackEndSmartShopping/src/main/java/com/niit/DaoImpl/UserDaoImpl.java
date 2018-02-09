@@ -15,37 +15,33 @@ import com.niit.Model.User;
 
 @Transactional
 @Repository("userDao")
-public class UserDaoImpl implements UserDao{
+public class UserDaoImpl implements UserDao {
 	List<User> users;
 	@Autowired
 	private SessionFactory sessionFactory;
-	
-	
-	 private Session getCurrentSession() {
 
-	        return sessionFactory.getCurrentSession();
-	    }
-	  
+	private Session getCurrentSession() {
+
+		return sessionFactory.getCurrentSession();
+	}
 
 	public UserDaoImpl(SessionFactory sessionFactory) {
-		
+
 		this.sessionFactory = sessionFactory;
 	}
 
 	public List<User> list() {
-	
+
 		return users;
 	}
 
 	public boolean save(User user) {
 		try {
-getCurrentSession().save(user);
-		
-		System.out.println("successfully created");
-		return true;
-		}
-		catch(Exception e)
-		{
+			getCurrentSession().save(user);
+
+			System.out.println("successfully created");
+			return true;
+		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
 		}
@@ -55,10 +51,11 @@ getCurrentSession().save(user);
 	public List<User> getUsers() {
 		return users;
 	}
+
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
-	
+
 	public boolean update(User user) {
 		try {
 			getCurrentSession().update(user);
@@ -66,8 +63,8 @@ getCurrentSession().save(user);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
-			
-		}	
+
+		}
 	}
 
 	public boolean delete(String id) {
@@ -82,7 +79,7 @@ getCurrentSession().save(user);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
-			
+
 		}
 	}
 

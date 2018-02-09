@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +37,7 @@
       <input type="text" class="form-control" id="cname" placeholder="Enter Category Name" name="cname">
     </div>
    
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
 

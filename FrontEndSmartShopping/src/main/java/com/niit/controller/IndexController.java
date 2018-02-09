@@ -1,15 +1,19 @@
 package com.niit.controller;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.Dao.CategoryDao;
 import com.niit.Dao.ProductDao;
 import com.niit.Dao.SupplierDao;
+import com.niit.Dao.UserDao;
 import com.niit.Model.Category;
 import com.niit.Model.Product;
 import com.niit.Model.Supplier;
@@ -39,6 +43,9 @@ public class IndexController {
 	@Autowired
 	private ProductDao productDao;
 
+	
+	@Autowired
+	private UserDao userDao;
 	@Autowired
 	private HttpSession session;
 
@@ -77,11 +84,37 @@ public class IndexController {
 		mv.addObject("isUserClickedLogin","true");
 		return mv;
 	}
-	@RequestMapping("/Admin")
-	public ModelAndView showAdmin(){
-		ModelAndView mv =new ModelAndView("/Admin");
-		mv.addObject("isUserClickedLogin","true");
+	
+	@RequestMapping("/register")
+	public ModelAndView showRegister(){
+		ModelAndView mv =new ModelAndView("register");
+		mv.addObject("isUserClickedRegister","true");
 		return mv;
 	}
-	
+	//Storing supplier data
+		@RequestMapping(value="/user", method=RequestMethod.POST)
+		public  String insertUser(@Valid @ModelAttribute("user") User muser,BindingResult result,Model model) {
+			
+			user.setRole("ROLE_USER");
+		   
+			if(userDao.save(muser)==true)
+			{
+				
+				model.addAttribute("msg", "Successfully created/updated the User");
+				model.addAttribute("msg", "Successfully User created");
+			} else {
+						model.addAttribute("msg", "not able created/updated the User");
+					}
+				
+			model.addAttribute("user", muser);
+			//model.addAttribute("userist", userDao.listSupplier());
+			
+			
+			return "redirect:home";
+			
+			
+			
+			
+		}
+		
 }

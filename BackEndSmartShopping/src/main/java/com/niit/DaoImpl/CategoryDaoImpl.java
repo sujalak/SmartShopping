@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.niit.Dao.CategoryDao;
 import com.niit.Model.Category;
 @Transactional
-@Repository("CategoryDao")
+@Repository("categoryDao")
 public class CategoryDaoImpl implements CategoryDao {
 
 	@Autowired
@@ -34,7 +34,7 @@ public class CategoryDaoImpl implements CategoryDao {
 		try {
 			
 			getCurrentSession().save(category);
-			System.out.println("successfully saved");
+			System.out.println("successfully category saved");
 			
 			return true;
 		} catch (Exception e) {

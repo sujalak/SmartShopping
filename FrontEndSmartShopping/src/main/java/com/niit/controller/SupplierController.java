@@ -25,7 +25,6 @@ public class SupplierController {
 	private Supplier supplier;
 	
 	
-
 	
 //Storing supplier data
 	@RequestMapping(value="/supplier", method=RequestMethod.POST)
@@ -41,10 +40,10 @@ public class SupplierController {
 				}
 			
 		model.addAttribute("supplier", msupplier);
-		model.addAttribute("supplierist", supplierDao.listSupplier());
-		model.addAttribute("isAdminClickedSupplier", "true");
+		//model.addAttribute("supplierist", supplierDao.listSupplier());
+		//model.addAttribute("isAdminClickedSupplier", "true");
 		
-		return "/supplier";
+		return "redirect:Admin#tab3";
 		
 		
 		

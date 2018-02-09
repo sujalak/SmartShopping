@@ -1,8 +1,13 @@
 package com.niit.Model;
 
+import java.io.Serializable;
+import java.util.*;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
@@ -11,11 +16,23 @@ import org.springframework.stereotype.Component;
 @Table(name="Category") 
 @Component
 
-public class Category {
+public class Category implements Serializable {
 	@Id
 	String cid;
 	@Column
 	String cname;
+	@OneToMany(targetEntity=Product.class ,fetch=FetchType.EAGER,mappedBy="category")
+	private Set<Product>products=new HashSet<Product>(0);
+	
+	
+	public Set<Product> getProducts() {
+		return products;
+	}
+	public void setProducts(Set<Product> products) {
+		this.products = products;
+	}
+	
+	
 	public String getCid() {
 		return cid;
 	}
@@ -25,6 +42,10 @@ public class Category {
 	public String getCname() {
 		return cname;
 	}
+	
+	
+	
+	
 	public void setCname(String cname) {
 		this.cname = cname;
 	}

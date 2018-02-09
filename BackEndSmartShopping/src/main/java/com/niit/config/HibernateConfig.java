@@ -18,6 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.niit.Dao.UserDao;
 import com.niit.DaoImpl.CategoryDaoImpl;
+import com.niit.DaoImpl.ProductDaoImpl;
 import com.niit.DaoImpl.SupplierDaoImpl;
 import com.niit.DaoImpl.UserDaoImpl;
 import com.niit.Model.User;
@@ -77,6 +78,13 @@ public class HibernateConfig {
 	public CategoryDaoImpl getCategoryData(SessionFactory sf) {
 
 		return new CategoryDaoImpl(sf);
+
+	}
+	@Autowired
+	@Bean(name = "productDao")
+	public ProductDaoImpl getProductData(SessionFactory sf) {
+
+		return new ProductDaoImpl(sf);
 
 	}
 

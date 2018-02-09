@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import com.niit.Dao.ProductDao;
 import com.niit.Model.Product;
 @Transactional
-@Repository("ProductDao")
+@Repository("productDao")
 public class ProductDaoImpl implements ProductDao {
 
 	@Autowired
