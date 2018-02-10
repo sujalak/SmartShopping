@@ -17,7 +17,7 @@ import com.niit.Model.Category;
 import com.niit.Model.Supplier;
 
 @Controller
-
+@RequestMapping("/Admin")
 public class SupplierController {
 	@Autowired
 	private SupplierDao supplierDao;

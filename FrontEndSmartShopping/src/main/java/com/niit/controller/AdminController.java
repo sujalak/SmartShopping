@@ -15,6 +15,7 @@ import com.niit.Model.Product;
 import com.niit.Model.Supplier;
 
 @Controller
+@RequestMapping("/Admin")
 public class AdminController {
 	@Autowired
 	private Product product;
@@ -37,7 +38,7 @@ public class AdminController {
 
 	
 	
-	@RequestMapping("/Admin")
+	@RequestMapping("/Manage")
 	public ModelAndView showAdmin() {
 		
 		ModelAndView mv = new ModelAndView("Admin");

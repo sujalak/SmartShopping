@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+     <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,12 +31,12 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="home.jsp">Home</a></li>
         
-        <li><a href="Admin">Admin</a></li>
-        <li><a href="#">Page 3</a></li>
+        <li><a href=""${contextRoot}/Admin/Manage">Admin</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/FrontEndSmartShopping/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="/FrontEndSmartShopping/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
