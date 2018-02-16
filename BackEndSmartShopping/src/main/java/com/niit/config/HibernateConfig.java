@@ -17,6 +17,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.niit.Dao.UserDao;
+import com.niit.DaoImpl.CartDaoImpl;
 import com.niit.DaoImpl.CategoryDaoImpl;
 import com.niit.DaoImpl.ProductDaoImpl;
 import com.niit.DaoImpl.SupplierDaoImpl;
@@ -49,7 +50,7 @@ public class HibernateConfig {
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
 		properties.put("hibernate.format_sql", "true");
-		//properties.put("hibernate.hbm2ddl.auto", "create");
+	//properties.put("hibernate.hbm2ddl.auto", "create");
 		System.out.println("inn properties");
 		return properties;
 	}
@@ -88,6 +89,13 @@ public class HibernateConfig {
 
 	}
 
+	@Autowired
+	@Bean(name = "cartDao")
+	public CartDaoImpl getCartData(SessionFactory sf) {
+
+		return new CartDaoImpl(sf);
+
+	}
 	@Autowired
 	@Bean(name = "transactionManager")
 	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {

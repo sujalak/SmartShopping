@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -17,12 +18,31 @@ import org.springframework.web.multipart.MultipartFile;
 @Entity
 public class Product implements Serializable {
 	@Id
-	@GeneratedValue
+	  @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int pid;
 	private String pname;
 	private String description;
 	private Float price;
 	private Integer stock;
+	private String category_id;
+	private String supplier_id;
+	
+	public String getCategory_id() {
+		return category_id;
+	}
+
+	public void setCategory_id(String category_id) {
+		this.category_id = category_id;
+	}
+
+	public String getSupplier_id() {
+		return supplier_id;
+	}
+
+	public void setSupplier_id(String supplier_id) {
+		this.supplier_id = supplier_id;
+	}
+
 	@Transient
 	private MultipartFile file;
 	
@@ -34,13 +54,13 @@ public class Product implements Serializable {
 	public void setFile(MultipartFile file) {
 		this.file = file;
 	}
-
+    
 	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="cid")
+	@JoinColumn(name="category_id", nullable = false, updatable = false, insertable = false)
 	private Category category;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="sid")
+	@JoinColumn(name="supplier_id",nullable = false, updatable = false, insertable = false)
 	private Supplier supplier;
 
 	public int getPid() {

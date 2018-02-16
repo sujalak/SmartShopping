@@ -2,7 +2,10 @@ D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Dao\Catego
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Dao\SupplierDao.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Model\User.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Model\Category.java
+D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Model\Cart.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Model\Supplier.java
+D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\DaoImpl\CartDaoImpl.java
+D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Dao\CartDao.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\DaoImpl\ProductDaoImpl.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Dao\UserDao.java
 D:\Project(SmartShopping)\BackEndSmartShopping\src\main\java\com\niit\Model\Product.java

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.niit.Dao.SupplierDao;
+
 import com.niit.Model.Supplier;
 @Transactional
 @Repository("supplierDao")
@@ -66,6 +67,11 @@ public class SupplierDaoImpl implements SupplierDao {
 		
 		  return  (Supplier) sessionFactory.getCurrentSession().createQuery("from Supplier where id = '"+id + "'").uniqueResult();
 	}
+	
+	public Supplier getSupplierByName(String name) {
+		  return  (Supplier) sessionFactory.getCurrentSession().createQuery("from Supplier where name = '"+name + "'").list().get(0);
+	}
+
 
 	public List<Supplier> listSupplier() {
 		return	sessionFactory.getCurrentSession().createQuery("from Supplier").list();

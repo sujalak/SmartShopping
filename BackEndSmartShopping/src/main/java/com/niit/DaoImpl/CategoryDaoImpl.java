@@ -27,7 +27,7 @@ public class CategoryDaoImpl implements CategoryDao {
         return sessionFactory.getCurrentSession();
     }
 	public List<Category> listCategories() {
-		return sessionFactory.getCurrentSession().createQuery("from Category").list();
+		return getCurrentSession().createQuery("from Category").list();
 	}
 
 	public boolean insertCategory(Category category) {
@@ -83,7 +83,7 @@ public class CategoryDaoImpl implements CategoryDao {
 	}
 
 	public Category getCategoryByName(String name) {
-		  return  (Category) sessionFactory.getCurrentSession().createQuery("from Category where name = '"+name + "'").list().get(0);
+		  return  (Category) sessionFactory.getCurrentSession().createQuery("from Category where cname = '"+name + "'").list().get(0);
 	}
 
 }

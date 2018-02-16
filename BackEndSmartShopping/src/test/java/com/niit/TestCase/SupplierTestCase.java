@@ -34,7 +34,7 @@ public class SupplierTestCase {
 @Test
 public void insertSupplierTestCase()
 {
-	supplier.setSid("8");
+	supplier.setSid("1");
 	supplier.setSupplierName("ajio");
 	
 	

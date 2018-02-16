@@ -20,6 +20,7 @@ import org.springframework.stereotype.Component;
 @Table(name = "Supplier")
 public class Supplier implements Serializable {
 	@Id
+	 // @GeneratedValue(strategy=GenerationType.IDENTITY)
 	String sid;
 	@NotBlank(message="please enter supplier Name")
 	String supplierName;
