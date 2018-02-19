@@ -66,7 +66,7 @@ public class IndexController {
 
 		session.setAttribute("supplierList", supplierDao.listSupplier());
 
-		session.setAttribute("productList", productDao.listProduct());
+		session.setAttribute("productList", productDao.listProducts());
 
 		return mv;
 	}

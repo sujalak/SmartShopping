@@ -39,7 +39,7 @@
 		
 	
 		
-		<form:form action="${addAction}" commandName="category">
+		<form:form action="${addAction}" modelAttribute="category">
 			<table class="table table-condensed">
 				<tr>
 					<td><form:label path="cid">	<spring:message text="Category ID" /></form:label></td>
@@ -89,9 +89,9 @@
 							<td>${category.cid}</td>
 							<td>${category.cname}</td>
 
-							<td> <a href="<c:url value='/categoryEdit/${category.cid}'/>"> <button style="font-size:36px"><i class="fa fa-edit" style="font-size: 36px"></i> </button></a> 			
+							<td> <a href="<c:url value='/categoryEdit/${category.cid}'/>"> <button class="btn btn-warning" style="font-size:20px"><i class="fa fa-edit" style="font-size: 36px"></i> </button></a> 			
 									</td>
-							<td><i class="fa fa-trash-o" style="font-size: 36px"></i></td>
+							<td><a href="<c:url value='/categoryDelete/${category.cid}'/>"> <button class="btn btn-danger" style="font-size:20px"><i class="fa fa-trash-o" style="font-size: 36px"></i></button></a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

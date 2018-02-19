@@ -8,7 +8,7 @@ import com.niit.Model.Product;
 public interface ProductDao {
 	// get all categories
 
-		public List<Product>listProduct();
+		public List<Product>listProducts();
 
 		// create product
 

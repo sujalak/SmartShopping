@@ -44,9 +44,9 @@ public class AdminController {
 		
 		ModelAndView mv = new ModelAndView("Admin");
 		
-		System.out.println("in admin");
+
 		mv.addObject("product", product);
-		mv.addObject("productList", productDao.listProduct());
+		mv.addObject("productList", productDao.listProducts());
 		mv.addObject("category", category);
 		mv.addObject("categoryList", categoryDao.listCategories());
 		mv.addObject("supplier", supplier);
@@ -56,7 +56,13 @@ public class AdminController {
 	}
 
 		
+	@RequestMapping("/product")
+	public ModelAndView showProduct() {
+		
+		ModelAndView mv = new ModelAndView("product");
+		return mv;
+		
 	
 	
-	
+}
 }

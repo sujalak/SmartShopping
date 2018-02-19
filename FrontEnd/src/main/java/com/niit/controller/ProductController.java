@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -80,12 +81,12 @@ mproduct.setCategory_id(category.getCid());
 		try{	
 		ServletContext context = session.getServletContext();  
 	    String path = context.getRealPath(UPLOAD_DIRECTORY);  
-	    String filename = file.getOriginalFilename();  
-	  
-	    System.out.println(path+" "+filename);        
+	   // String filename = file.getOriginalFilename();  
+
+	    //System.out.println(path+" "+filename);        
 	  
 	    byte[] bytes = file.getBytes();  
-	    BufferedOutputStream stream =new BufferedOutputStream(new FileOutputStream( new File(path + File.separator + filename)));  
+	    BufferedOutputStream stream =new BufferedOutputStream(new FileOutputStream( new File(path + File.separator + product.getPid()+".jpg")));  
 	    stream.write(bytes);  
 	    stream.flush();  
 	    stream.close();
@@ -104,4 +105,25 @@ mproduct.setCategory_id(category.getCid());
 		
 	}
 	
+	
+	@RequestMapping("productEdit/{cid}")
+	public String editProduct(@PathVariable("pid") String id, Model model) {
+		System.out.println("editCategory");
+		model.addAttribute("product", this.productDao.getProductByID(id));
+		model.addAttribute("listProduct", this.productDao.listProducts());
+		return "product";
+	}
+	
+	@RequestMapping("productDelete/{cid}")
+	public String deleteProduct(@PathVariable("cid") String id, Model model) {
+		
+		try {
+			productDao.deleteProduct(id);
+			model.addAttribute("message", "Successfully deleted");
+		} catch (Exception e) {
+			model.addAttribute("message", e.getMessage());
+			e.printStackTrace();
+		}
+		return "product";
+	}
 }

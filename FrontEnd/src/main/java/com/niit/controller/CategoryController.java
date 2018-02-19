@@ -51,5 +51,17 @@ public class CategoryController {
 		model.addAttribute("listCategory", this.categoryDao.listCategories());
 		return "category";
 	}
-
+	
+	@RequestMapping("categoryDelete/{cid}")
+	public String deleteCategory(@PathVariable("cid") String id, Model model) {
+		
+		try {
+			categoryDao.deleteCategory(id);
+			model.addAttribute("message", "Successfully deleted");
+		} catch (Exception e) {
+			model.addAttribute("message", e.getMessage());
+			e.printStackTrace();
+		}
+		return "category";
+	}
 }
