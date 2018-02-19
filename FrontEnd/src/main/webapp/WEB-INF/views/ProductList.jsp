@@ -44,19 +44,19 @@
 				<c:forEach items="${productList}" var="product">
 					<tr>
 						<td>${product.pid}</td>
-						<td>${produc.pname}</td>
-						<td ><img src="<c:url value="/images/${product.pid}.jpg"/>"></img></td>
+						<td>${product.pname}</td>
+						<td ><img src="<c:url value="images/${product.pid}.jpg"/>" width="150" height="100"></img></td>
 						<td>${product.description}</td>
 						<td>${product.price}</td>
 						<td>${product.stock}</td>
 						<td>${product.category.cname}</td>
 						<td>${product.supplier.supplierName}</td>
-						<td><a href="<c:url value='/product/Edit/${product.pid}'/>">
+						<td><a href="<c:url value='/productEdit/${product.pid}'/>">
 								<button class="btn btn-warning" style="font-size: 20px">
 									<i class="fa fa-edit" style="font-size: 36px"></i>
 								</button>
 						</a></td>
-						<td><a href="<c:url value='/product/Delete/${product.pid}'/>">
+						<td><a href="<c:url value='/productDelete/${product.pid}'/>">
 								<button class="btn btn-danger" style="font-size: 20px">
 									<i class="fa fa-trash-o" style="font-size: 36px"></i>
 								</button>

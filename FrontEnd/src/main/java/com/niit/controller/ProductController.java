@@ -83,10 +83,10 @@ mproduct.setCategory_id(category.getCid());
 	    String path = context.getRealPath(UPLOAD_DIRECTORY);  
 	   // String filename = file.getOriginalFilename();  
 
-	    //System.out.println(path+" "+filename);        
+	    System.out.println(path);        
 	  
 	    byte[] bytes = file.getBytes();  
-	    BufferedOutputStream stream =new BufferedOutputStream(new FileOutputStream( new File(path + File.separator + product.getPid()+".jpg")));  
+	    BufferedOutputStream stream =new BufferedOutputStream(new FileOutputStream( new File(path + File.separator + mproduct.getPid()+".jpg")));  
 	    stream.write(bytes);  
 	    stream.flush();  
 	    stream.close();
@@ -106,7 +106,7 @@ mproduct.setCategory_id(category.getCid());
 	}
 	
 	
-	@RequestMapping("productEdit/{cid}")
+	@RequestMapping("productEdit/{pid}")
 	public String editProduct(@PathVariable("pid") String id, Model model) {
 		System.out.println("editCategory");
 		model.addAttribute("product", this.productDao.getProductByID(id));
@@ -114,8 +114,8 @@ mproduct.setCategory_id(category.getCid());
 		return "product";
 	}
 	
-	@RequestMapping("productDelete/{cid}")
-	public String deleteProduct(@PathVariable("cid") String id, Model model) {
+	@RequestMapping("productDelete/{pid}")
+	public String deleteProduct(@PathVariable("pid") String id, Model model) {
 		
 		try {
 			productDao.deleteProduct(id);
