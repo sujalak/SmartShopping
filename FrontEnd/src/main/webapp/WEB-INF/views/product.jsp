@@ -56,8 +56,8 @@
 
 			<div class="col-md-4">
 
-				<input id="product_id" name="product_id" placeholder="Product Id"
-					class="form-control input-md" required type="text">
+				<input id="product_id" name="pid" placeholder="Product Id"
+					class="form-control input-md" required type="text" hidden="true" disabled>
 
 
 
@@ -77,7 +77,7 @@
 
 			<div class="col-md-4">
 
-				<input id="product_name" name="product_name"
+				<input id="product_name" name="pname"
 					class="form-control input-md" type="text"
 					placeholder="Product Name" required>
 
@@ -99,7 +99,7 @@
 
 			<div class="col-md-4">
 
-				<input id="product_name_fr" name="product_name_fr"
+				<input id="product_name_fr" name="description"
 					placeholder="Product Description " class="form-control input-md"
 					required type="text">
 
@@ -116,7 +116,7 @@
 
 			<div class="col-md-4">
 
-				<input id="product_price" name="productprice"
+				<input id="product_price" name="price"
 					placeholder="Product Price" class="form-control input-md" required
 					type="text">
 
@@ -133,7 +133,7 @@
 
 			<div class="col-md-4">
 
-				<input id="product_stock" name="produc_stock"
+				<input id="product_stock" name="stock"
 					placeholder="Product Stock" class="form-control input-md" required
 					type="text">
 
@@ -156,7 +156,7 @@
 			<div class="col-md-4">
 
 
-				<select class="form-control">
+				<select class="form-control" name="category_id">
 					<c:forEach var="category" items="${categoryList}">
 						<option>${category.cname}</option>
 					</c:forEach>
@@ -167,7 +167,7 @@
 
 		</div>
 
-		<div class="form-group">
+		<div class="form-group" >
 
 			<label class="col-md-4 control-label" for="suppliers">Product
 				Supplier</label>
@@ -176,7 +176,7 @@
 			<div class="col-md-4">
 
 
-				<select class="form-control">
+				<select class="form-control" name="supplier_id">
 					<c:forEach var="supplier" items="${supplierList}">
 						<option>${supplier.supplierName}</option>
 					</c:forEach>

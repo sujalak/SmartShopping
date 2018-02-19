@@ -28,33 +28,34 @@ import com.niit.Model.Supplier;
 public class ProductController {
 	@Autowired
 	private ProductDao productDao;
-	private CategoryDao categoryDao;
+
 	@Autowired
-	Category category;
+	private Category category;
 	
 	@Autowired
-	CategoryDao categoryDAO;
+private	CategoryDao categoryDao;
 	
 	@Autowired
-	SupplierDao supplierDAO;
+	private SupplierDao supplierDao;
 	
 	@Autowired
-	Supplier supplier;
+private	Supplier supplier;
 	
 	@Autowired
-	Product product;
+private	Product product;
 	
 	 private static final String UPLOAD_DIRECTORY ="/WEB-INF/images";  
 
 //Storing product data
 	@RequestMapping(value="/product", method=RequestMethod.POST)
 	public  String insertProduct(@ModelAttribute("product") Product mproduct,BindingResult result,Model model, @RequestParam CommonsMultipartFile file,HttpSession session) {
-	
-		 category=categoryDao.getCategoryByName(mproduct.getCategory().getCname());
-		categoryDao.insertCategory(category);
-		
-		 supplier=supplierDAO.getSupplierByName(mproduct.getSupplier().getSupplierName());
-		supplierDAO.insertSupp(supplier);
+
+
+		 category=categoryDao.getCategoryByName(mproduct.getCategory_id());
+		//categoryDao.insertCategory(category);
+		System.out.println(mproduct.getSupplier_id());
+		supplier=supplierDao.getSupplierByName(mproduct.getSupplier_id());
+		//supplierDao.insertSupp(supplier);
 		
 mproduct.setSupplier_id(supplier.getSid());
 mproduct.setCategory_id(category.getCid());
@@ -68,7 +69,7 @@ mproduct.setCategory_id(category.getCid());
 		if(productDao.insertProduct(mproduct)==true)
 		{
 			
-			System.out.println("product insrted");
+			System.out.println("product inserted");
 			model.addAttribute("msg", "Successfully created/updated the product");
 		} else {
 					model.addAttribute("msg", "not able created/updated the product");

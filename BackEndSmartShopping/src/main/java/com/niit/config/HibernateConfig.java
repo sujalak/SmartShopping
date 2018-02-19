@@ -47,9 +47,9 @@ public class HibernateConfig {
 
 	private Properties getHibernateProperties() {
 		Properties properties = new Properties();
-		properties.put("hibernate.show_sql", "true");
+		//properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-		properties.put("hibernate.format_sql", "true");
+		//properties.put("hibernate.format_sql", "true");
 	//properties.put("hibernate.hbm2ddl.auto", "create");
 		System.out.println("inn properties");
 		return properties;

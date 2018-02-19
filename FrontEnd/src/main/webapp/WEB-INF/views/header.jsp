@@ -52,7 +52,7 @@
         <li><a href="${contextRoot}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     <%--     </security:authorize> --%>    
         <security:authorize access="isAuthenticated()">
-   <li>authenticated as <security:authentication property="principal.username" /> </li>
+   <li>Welcome  <security:authentication property="principal.username" /> </li>
     </security:authorize>
          <security:authorize access="hasRole('USER')">
          <li><a href="${contextRoot}/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>

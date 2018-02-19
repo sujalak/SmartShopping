@@ -33,7 +33,7 @@ public class CategoryDaoImpl implements CategoryDao {
 	public boolean insertCategory(Category category) {
 		try {
 			
-			getCurrentSession().save(category);
+			getCurrentSession().saveOrUpdate(category);
 			System.out.println("successfully category saved");
 			
 			return true;

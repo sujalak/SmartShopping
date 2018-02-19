@@ -24,7 +24,7 @@ public class CategoryController {
 	
 	
 
-	@RequestMapping(value = "/category", method = RequestMethod.POST)
+	@RequestMapping(value = "/categoryAdd", method = RequestMethod.POST)
 	public String insertCategory(@ModelAttribute("category") Category mcategory,BindingResult result, Model model) {
 		System.out.println("category add");
 		if(result.hasErrors()) {
@@ -42,7 +42,9 @@ public class CategoryController {
 		
 		return "redirect:Admin";
 	}
-	@RequestMapping("category/edit/{cid}")
+	
+	
+	@RequestMapping("categoryEdit/{cid}")
 	public String editCategory(@PathVariable("cid") String id, Model model) {
 		System.out.println("editCategory");
 		model.addAttribute("category", this.categoryDao.getCategoryByID(id));
