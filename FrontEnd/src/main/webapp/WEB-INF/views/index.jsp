@@ -91,7 +91,7 @@ img {
 									<p>${product.pname}</p>
 									Rs:<p>${product.price}</p>
 									<p>
-										<a href="<c:url value='/cart/Add'/>">
+										<a href="<c:url value='/cart/Add/${product.pid}'/>">
 											<button class="btn btn-info" style="font-size: 36px">
 												<i class="fa fa-shopping-cart" style="font-size: 36px"></i>
 											</button>

@@ -31,7 +31,7 @@ public class CartTestCase {
 	public void insertCartTestCase() {
 		cart.setP_id(1);
 		cart.setP_name("kurtha");
-		cart.setPrice(2000);
+		cart.setPrice(2000.0f);
 		cart.setQuantity(2);
 cart.setStatus("order");
 cart.setU_id("aaa");

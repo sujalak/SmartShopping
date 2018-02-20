@@ -18,7 +18,7 @@ public class Cart implements Serializable{
 	  @GeneratedValue(strategy=GenerationType.IDENTITY)
 	  private int id;
 	  private String p_name;
-	  private int price;
+	  private Float price;
 	  private int quantity;
 	  private String status;
 	  private String u_id;
@@ -35,11 +35,11 @@ public class Cart implements Serializable{
 	public void setP_name(String p_name) {
 		this.p_name = p_name;
 	}
-	public int getPrice() {
+	public Float getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
-		this.price = price;
+	public void setPrice(Float float1) {
+		this.price = float1;
 	}
 	public int getQuantity() {
 		return quantity;
