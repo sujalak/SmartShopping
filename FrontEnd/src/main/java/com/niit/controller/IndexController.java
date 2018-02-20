@@ -67,7 +67,7 @@ public class IndexController {
 		session.setAttribute("supplierList", supplierDao.listSupplier());
 
 		session.setAttribute("productList", productDao.listProducts());
-
+		
 		return mv;
 	}
 
@@ -89,6 +89,7 @@ public class IndexController {
 		mv.addObject("isUserClickedRegister", "true");
 		return mv;
 	}
+	
 
 	// Storing supplier data
 	@RequestMapping(value = "/user", method = RequestMethod.POST)
@@ -119,5 +120,11 @@ public class IndexController {
 		mv.addObject("title", "403 Access Denied");		
 		return mv;
 	}	
+	@RequestMapping("/productlist")
+	public ModelAndView showProducts() {
+		ModelAndView mv = new ModelAndView("productList");
+		mv.addObject("isUserClickedViewProducts", "true");
+		return mv;
+	}
 
 }

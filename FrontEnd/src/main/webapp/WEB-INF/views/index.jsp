@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -71,51 +76,40 @@ img {
 			</div>
 		</div>
 	</div>
+	
+		<div class="container">
 
-	<div class="container">
-		<p>Click on the images to enlarge them.</p>
-		<td>
-		<tr>
-			<td>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="thumbnail">
-							<a href="images\KidsKurtha.jpg" target="_blank"> <img
-								src="images\KidsKurtha.jpg" alt="Lights"
-								style="width: 100%; height: 45%">
+			
+					<div class="row">
+					<c:forEach items="${productList}" var="product">
+						<div class="col-md-4">
+						
+							<div class="thumbnail">
+								<img src="<c:url value="images/${product.pid}.jpg"/>"
+									width="150" height="100"></img>
 								<div class="caption">
-									<p>KidsKurtha</p>
+									<p>${product.pname}</p>
+									Rs:<p>${product.price}</p>
+									<p>
+										<a href="<c:url value='/cart/Add'/>">
+											<button class="btn btn-info" style="font-size: 36px">
+												<i class="fa fa-shopping-cart" style="font-size: 36px"></i>
+											</button>
+										</a>
+									</p>
 								</div>
-							</a>
+								
+							</div>
 						</div>
-					</div>
-			</td>
-			<td>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<a href="images\lehenga-saree.jpg" target="_blank"> <img
-							src="images\lehenga-saree.jpg" alt="Nature" style="width: 100%">
-							<div class="caption">
-								<p>lehenga.</p>
-							</div>
-						</a>
+						</c:forEach>
 					</div>
 				</div>
-			</td>
-			<td>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<a href="images\lehngacholiSet.jpg" target="_blank"> <img
-							src="images\lehngacholiSet.jpg" alt="Fjords" style="width: 100%">
-							<div class="caption">
-								<p>lehngacholiSet</p>
-							</div>
-						</a>
-					</div>
-				</div>
-			</td>
-		</tr>
-	</div>
-	</div>
+	
+
+
+
+
+
+
 </body>
 </html>

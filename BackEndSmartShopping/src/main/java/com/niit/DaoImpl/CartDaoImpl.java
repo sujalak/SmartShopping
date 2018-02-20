@@ -30,7 +30,7 @@ public class CartDaoImpl implements CartDao {
 	public boolean insertCart(Cart cart) {
 try {
 			
-			getCurrentSession().save(cart);
+			getCurrentSession().saveOrUpdate(cart);
 			System.out.println("successfully cart saved");
 			
 			return true;

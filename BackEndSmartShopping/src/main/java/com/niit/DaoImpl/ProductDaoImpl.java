@@ -34,7 +34,7 @@ public class ProductDaoImpl implements ProductDao {
 	public boolean insertProduct(Product product) {
 		try {
 			
-			getCurrentSession().save(product);
+			getCurrentSession().saveOrUpdate(product);
 			System.out.println("successfully saved");
 			
 			return true;

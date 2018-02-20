@@ -29,7 +29,7 @@
 					<div class="col-md-offset-2 col-md-8">
 
 
-						<form action="${contextRoot}/user" method="post">
+						<form action="user" method="post">
 
 
 
@@ -45,7 +45,7 @@
 							<div class="form-group">
 								<label class="control-label col-md-4">Name</label>
 								<div class="col-md-8">
-									<input type="text" name="Name" class="form-control"  placeholder=="Name" />
+									<input type="text" name="name" class="form-control"  placeholder="Name" />
 
 								</div>
 							</div>

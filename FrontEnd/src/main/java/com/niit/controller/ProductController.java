@@ -46,9 +46,15 @@ private	Supplier supplier;
 private	Product product;
 	
 	 private static final String UPLOAD_DIRECTORY ="/WEB-INF/images";  
-
+	/* @ModelAttribute("product")
+		public Product defaultInstance() {
+		Product product = new Product();
+		  
+		    return  product;
+		}*/
+		
 //Storing product data
-	@RequestMapping(value="/product", method=RequestMethod.POST)
+	@RequestMapping(value="/productAdd", method=RequestMethod.POST)
 	public  String insertProduct(@ModelAttribute("product") Product mproduct,BindingResult result,Model model, @RequestParam CommonsMultipartFile file,HttpSession session) {
 
 

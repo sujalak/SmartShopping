@@ -20,7 +20,12 @@ public class CategoryController {
 	private Category category;
 	
 	
-	
+	@ModelAttribute("category")
+	public Category defaultInstance() {
+		Category category = new Category();
+	  
+	    return  category;
+	}
 	
 	
 
@@ -28,7 +33,7 @@ public class CategoryController {
 	public String insertCategory(@ModelAttribute("category") Category mcategory,BindingResult result, Model model) {
 		System.out.println("category add");
 		if(result.hasErrors()) {
-			return"/";
+			return"redirect:home";
 		}
 		if (categoryDao.insertCategory(mcategory) == true) {
 			
@@ -64,4 +69,8 @@ public class CategoryController {
 		}
 		return "category";
 	}
+	
 }
+
+
+

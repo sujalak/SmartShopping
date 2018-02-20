@@ -56,8 +56,10 @@ public class AdminController {
 	}
 
 		
-	@RequestMapping("/product")
-	public ModelAndView showProduct() {
+	@RequestMapping("/productAdd")
+	public ModelAndView showProduct(Model model) {
+		model.addAttribute("product",new Product());
+		
 		
 		ModelAndView mv = new ModelAndView("product");
 		return mv;

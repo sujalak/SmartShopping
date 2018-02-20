@@ -3,6 +3,8 @@
 <%@page isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
@@ -25,7 +27,7 @@
 </head>
 
 <body>
-
+	<c:url var="addAction"  value="/productAdd"></c:url>
 	<c:if test="${not empty msg}">
 
 
@@ -36,203 +38,117 @@
 			</div>
 		</div>
 	</c:if>
-	<form action="${contextRoot}/product" method="post"
-		class="form-horizontal" enctype="multipart/form-data">
+	<form:form action="${addAction}" enctype="multipart/form-data" commandName="product"  role="form">
 
+		<table class="table table-condensed">
+<tr>	
+		<td><form:label path="pid">	<spring:message text="Product Id" /></form:label></td> 
+			<c:choose>
+				<c:when test="${!empty product.pid}">
 
+					<td><form:input path="pid" disabled="true" readonly="true" /></td>
+				</c:when>
+				<c:otherwise>
+					<td><form:input path="pid" required="true" disabled="true" /></td>
+				</c:otherwise>
+			</c:choose>
+			</tr>
+			<tr>
+				<form:input path="pid" hidden="true" />
 
 
 
-		<!-- Form Name -->
 
+				<%-- 
+		<td>	<form:label path="pid"><spring:message text="Product Id" /> </form:label></td>
+		<td>	<form:input id="product_id" path="pid" type="text" hidden="true" disabled ="true" /></td> --%>
 
 
-		<!-- Text input-->
+			</tr>
+			<tr>
+				<td><form:label path="pname">
+						<spring:message text="ProductName" />
+					</form:label></td>
+				<td><form:input id="product_name" path="pname" type="text"
+						placeholder="Product Name" required="true" /></td>
+			</tr>
+			<tr>
 
-		<div class="form-group">
 
-			<label class="col-md-4 control-label" for="product_id">Product
-				Id</label>
 
-			<div class="col-md-4">
+				<td><form:label path="description">
+						<spring:message text="Product Description" />
+					</form:label></td>
+				<td><form:input path="description"
+						placeholder="Product Description" required="true" type="text" /></td>
+			</tr>
 
-				<input id="product_id" name="pid" placeholder="Product Id"
-					class="form-control input-md" required type="text" hidden="true" disabled>
+			<tr>
+				<td><form:label path="price">
+						<spring:message text="Product Price" />
+					</form:label></td>
 
+				<td><form:input id="product_price" path="price"
+						placeholder="Product Price" required="true" type="text" /></td>
+			</tr>
 
 
-			</div>
+			<tr>
 
-		</div>
+				<td><form:label path="stock">
+						<spring:message text=" Product Quantity" />
+					</form:label></td>
 
+				<td><form:input id="product_stock" path="stock"
+						placeholder="Product Stock" required="true" type="text" /></td>
+			</tr>
 
+			<tr>
+				<td><form:label path="category_id">
+						<spring:message text="Produt Category" />
+					</form:label></td>
+				<td><form:select path="category_id">
+						<c:forEach var="category" items="${categoryList}">
+							<option>${category.cname}</option>
+						</c:forEach>
+					</form:select></td>
+			</tr>
 
+			<tr>
+				<td><form:label path="supplier_id">
+						<spring:message text="Product 	Supplier" />
+					</form:label></td>
 
-		<!-- Text input-->
+				<td><form:select class="form-control" path="supplier_id">
+						<c:forEach var="supplier" items="${supplierList}">
+							<option>${supplier.supplierName}</option>
+						</c:forEach>
+					</form:select></td>
+			</tr>
 
-		<div class="form-group">
 
-			<label class="col-md-4 control-label" for="product_name">Product
-				Name</label>
 
-			<div class="col-md-4">
 
-				<input id="product_name" name="pname"
-					class="form-control input-md" type="text"
-					placeholder="Product Name" required>
 
 
+			<tr>
+				<td><from:label>
+						<spring:message text="Product image" />
+					</from:label></td>
 
-			</div>
+				<td><input id="file" name="file" class="input-file" type="file"></td>
+			<tr>
+				<td><input type="submit" path="submit" class="btn btn-primary"
+					value="<spring:message text="Submit"/>" /></td>
 
-		</div>
 
 
+				<td><input type="submit" path="cancel" class="btn btn-warning"
+					value="<spring:message text="Cancel"/>" /></td>
+			</tr>
 
-
-		<!-- Text input-->
-
-		<div class="form-group">
-
-			<label class="col-md-4 control-label" for="product_name_fr">Product
-				Description </label>
-
-			<div class="col-md-4">
-
-				<input id="product_name_fr" name="description"
-					placeholder="Product Description " class="form-control input-md"
-					required type="text">
-
-
-
-			</div>
-
-		</div>
-
-		<div class="form-group">
-
-			<label class="col-md-4 control-label" for="product_price">Product
-				Price</label>
-
-			<div class="col-md-4">
-
-				<input id="product_price" name="price"
-					placeholder="Product Price" class="form-control input-md" required
-					type="text">
-
-
-
-			</div>
-
-		</div>
-
-		<div class="form-group">
-
-			<label class="col-md-4 control-label" for="product_stock">Product
-				Stock</label>
-
-			<div class="col-md-4">
-
-				<input id="product_stock" name="stock"
-					placeholder="Product Stock" class="form-control input-md" required
-					type="text">
-
-
-
-			</div>
-
-		</div>
-
-
-
-		<!-- Select Basic -->
-
-		<div class="form-group">
-
-			<label class="col-md-4 control-label" for="categorie">Product
-				Category</label>
-
-
-			<div class="col-md-4">
-
-
-				<select class="form-control" name="category_id">
-					<c:forEach var="category" items="${categoryList}">
-						<option>${category.cname}</option>
-					</c:forEach>
-				</select>
-
-			</div>
-
-
-		</div>
-
-		<div class="form-group" >
-
-			<label class="col-md-4 control-label" for="suppliers">Product
-				Supplier</label>
-
-
-			<div class="col-md-4">
-
-
-				<select class="form-control" name="supplier_id">
-					<c:forEach var="supplier" items="${supplierList}">
-						<option>${supplier.supplierName}</option>
-					</c:forEach>
-				</select>
-
-			</div>
-
-
-			<div class="col-md-4"></div>
-
-		</div>
-
-
-
-
-
-
-
-
-
-
-		<!-- File Button -->
-
-		<div class="form-group">
-
-			<label class="col-md-4 control-label" for="filebutton">Product
-				image</label>
-
-			<div class="col-md-4">
-
-				<input id="file" name="file" class="input-file" type="file">
-
-			</div>
-
-		</div>
-
-		<!-- Button -->
-
-		
-
-
-
-			<div class="form-group">
-				<div class="row">
-					<div class="col-md-4">
-
-						<button id="submitbutton" name="submit" class="btn btn-primary">Submit</button>
-
-
-
-						<button id="cancelbutton" name="cancel" class="btn btn-warning">Cancel</button>
-
-					</div>
-				</div>
-				</div>
-	</form>
+		</table>
+	</form:form>
 
 
 

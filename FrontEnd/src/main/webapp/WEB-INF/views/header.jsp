@@ -43,18 +43,19 @@
         <li><a href="${contextRoot}/Admin">Manage</a></li>
         </security:authorize>
         <security:authorize access="hasRole('USER')">
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        <li><a href="${contextRoot}/cart/show"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+          <li><a href="${contextRoot}/productlist"> View Products</a></li>
         </security:authorize>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-    <%--   <security:authorize access="hasRole('Anonymous')"> --%>
+   <c:if test="${pageContext.request.userPrincipal.name  == null}">
         <li><a href="${contextRoot}/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="${contextRoot}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    <%--     </security:authorize> --%>    
+ </c:if>  
         <security:authorize access="isAuthenticated()">
    <li>Welcome  <security:authentication property="principal.username" /> </li>
-    </security:authorize>
-         <security:authorize access="hasRole('USER')">
+    <%-- </security:authorize>
+         <security:authorize access="hasRole('USER')"> --%>
          <li><a href="${contextRoot}/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </security:authorize>
       </ul>

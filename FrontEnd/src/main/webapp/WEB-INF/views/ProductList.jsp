@@ -3,6 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+  <%@taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +22,11 @@
 
 	<div class="container">
 		<h2>Product List</h2>
-       <a href="${contextRoot}/product" class="btn btn-info btn-lg">
+		 <security:authorize access="hasRole('ADMIN')">
+       <a href="${contextRoot}/productAdd" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-plus"></span> Add Product 
         </a>
+        </security:authorize>
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -35,9 +38,12 @@
 					<th>Quantity</th>
 					<th>Category</th>
 					<th>Supplier</th>
-
+ <security:authorize access="hasRole('ADMIN')">
 					<th>Edit</th>
 					<th>Delete</th>
+					</security:authorize>
+					<th>Add To Cart</th>
+					
 				</tr>
 			</thead>
 			<tbody>
@@ -51,16 +57,26 @@
 						<td>${product.stock}</td>
 						<td>${product.category.cname}</td>
 						<td>${product.supplier.supplierName}</td>
+						  <security:authorize access="hasRole('ADMIN')">
 						<td><a href="<c:url value='/productEdit/${product.pid}'/>">
-								<button class="btn btn-warning" style="font-size: 20px">
+								<button class="btn btn-warning" style="font-size: 36px">
 									<i class="fa fa-edit" style="font-size: 36px"></i>
 								</button>
 						</a></td>
+						
 						<td><a href="<c:url value='/productDelete/${product.pid}'/>">
-								<button class="btn btn-danger" style="font-size: 20px">
+								<button class="btn btn-danger" style="font-size: 36px">
 									<i class="fa fa-trash-o" style="font-size: 36px"></i>
 								</button>
 						</a></td>
+						</security:authorize>
+						<security:authorize access="hasRole('USER')">
+						<td><a href="<c:url value='/cart/Add}'/>">
+								<button class="btn btn-info" style="font-size: 36px">
+									<i class="fa fa-shopping-cart" style="font-size: 36px"></i>
+								</button>
+						</a></td>
+						</security:authorize>
 					</tr>
 				</c:forEach>
 			</tbody>

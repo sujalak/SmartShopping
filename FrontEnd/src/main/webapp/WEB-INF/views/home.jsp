@@ -24,11 +24,7 @@
 html {
     font-family: "Lucida Sans", sans-serif;
 }
-.header {
-    background-color: #9933cc;
-    color: #ffffff;
-    padding: 15px;
-}
+
 
 .footer {
     background-color: #0099cc;
