@@ -72,6 +72,9 @@ body {
 			evt.currentTarget.className += " active";
 		}
 	</script>
+	<div class="header">
+  <%@include file="header.jsp" %>
+</div>
 	<div class="container">
 		<h2>Admin</h2>
 

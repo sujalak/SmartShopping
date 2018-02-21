@@ -1,6 +1,8 @@
 com\niit\Model\Supplier.class
 com\niit\Dao\ProductDao.class
+com\niit\Dao\OrderDao.class
 com\niit\Model\User.class
+com\niit\DaoImpl\OrderDaoImpl.class
 com\niit\BackEndSmartShopping\App.class
 com\niit\Dao\CartDao.class
 com\niit\DaoImpl\UserDaoImpl.class
@@ -10,6 +12,7 @@ com\niit\Model\Cart.class
 com\niit\Dao\SupplierDao.class
 com\niit\Dao\UserDao.class
 com\niit\Model\Category.class
+com\niit\Model\Order.class
 com\niit\DaoImpl\ProductDaoImpl.class
 com\niit\Model\Product.class
 com\niit\DaoImpl\CartDaoImpl.class

@@ -89,13 +89,17 @@ img {
 									width="150" height="100"></img>
 								<div class="caption">
 									<p>${product.pname}</p>
-									<p>${product.price}</p>
+									<b><p>Rs:${product.price}</p></b>
 									<p>
-										<a href="<c:url value='/cart/Add}'/>">
+									 <c:if test="${pageContext.request.userPrincipal.name!= null}">
+									 
+								
+										<a href="<c:url value='/cart/Add/${product.pid}'/>">
 											<button class="btn btn-info" style="font-size: 36px">
 												<i class="fa fa-shopping-cart" style="font-size: 36px"></i>
 											</button>
 										</a>
+											 </c:if>
 									</p>
 								</div>
 								

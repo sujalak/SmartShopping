@@ -11,10 +11,9 @@ public interface CartDao {
 
 	public boolean insertCart(Cart cart);
 
-	// update cart
+	
 
-	public boolean updateCart(Cart cart);
-
+	
 	// delete cart by id
 
 	public boolean deleteCart(String id);
@@ -29,5 +28,5 @@ public interface CartDao {
 
 	// get cart by name
 	
-
+	 public List<Cart> userCartList(String uname);
 }

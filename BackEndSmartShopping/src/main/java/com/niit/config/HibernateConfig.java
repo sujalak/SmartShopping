@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.niit.Dao.UserDao;
 import com.niit.DaoImpl.CartDaoImpl;
 import com.niit.DaoImpl.CategoryDaoImpl;
+import com.niit.DaoImpl.OrderDaoImpl;
 import com.niit.DaoImpl.ProductDaoImpl;
 import com.niit.DaoImpl.SupplierDaoImpl;
 import com.niit.DaoImpl.UserDaoImpl;
@@ -47,7 +48,7 @@ public class HibernateConfig {
 
 	private Properties getHibernateProperties() {
 		Properties properties = new Properties();
-		//properties.put("hibernate.show_sql", "true");
+		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
 		//properties.put("hibernate.format_sql", "true");
 	//properties.put("hibernate.hbm2ddl.auto", "create");
@@ -94,6 +95,13 @@ public class HibernateConfig {
 	public CartDaoImpl getCartData(SessionFactory sf) {
 
 		return new CartDaoImpl(sf);
+
+	}
+	@Autowired
+	@Bean(name = "orderDao")
+	public OrderDaoImpl getOrderData(SessionFactory sf) {
+
+		return new OrderDaoImpl(sf);
 
 	}
 	@Autowired

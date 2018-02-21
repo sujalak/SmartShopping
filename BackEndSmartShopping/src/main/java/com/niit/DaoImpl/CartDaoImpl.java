@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,16 +41,6 @@ try {
 		}
 	}
 
-	public boolean updateCart(Cart cart) {
-		try {
-			getCurrentSession().update(cart);
-			return true;
-		} catch (Exception e) {
-			e.printStackTrace();
-			return false;
-			
-		}
-	}
 
 	public boolean deleteCart(String id) {
 		try {
@@ -69,5 +60,18 @@ try {
 	public List<Cart> listCart() {
 		return getCurrentSession().createQuery("from Cart").list();
 	}
-
+	 public List<Cart> userCartList(String uname)
+	   {
+		  
+			
+		   List<Cart> list=sessionFactory.getCurrentSession().createQuery("from Cart where u_id="+"'"+uname+"'").list();
+			
+		
+			if(list!=null&& !list.isEmpty())
+			{
+				return list;
+			}
+			return null;
+	   }
+	
 }

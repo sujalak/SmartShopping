@@ -27,7 +27,7 @@
 </head>
 
 <body>
-
+	<c:url var="addAction"  value="/productAdd"></c:url>
 	<c:if test="${not empty msg}">
 
 
@@ -38,14 +38,13 @@
 			</div>
 		</div>
 	</c:if>
-	<form:form action="${contextRoot}/product" method="post"
-		enctype="multipart/form-data" modelAttribute="product">
+	<form:form action="${addAction}" enctype="multipart/form-data" commandName="product"  role="form">
 
 		<table class="table table-condensed">
-<tr>
-			<td><form:label path="Pid">	<spring:message text="Product Id" /></form:label></td>
+<tr>	
+		<td><form:label path="pid">	<spring:message text="Product Id" /></form:label></td> 
 			<c:choose>
-				<c:when test="${!empty product.pid }">
+				<c:when test="${!empty product.pid}">
 
 					<td><form:input path="pid" disabled="true" readonly="true" /></td>
 				</c:when>

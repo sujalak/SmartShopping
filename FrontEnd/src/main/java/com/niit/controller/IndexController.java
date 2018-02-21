@@ -96,6 +96,7 @@ public class IndexController {
 	public String insertUser(@Valid @ModelAttribute("user") User muser, BindingResult result, Model model) {
 
 		muser.setRole("ROLE_USER");
+		muser.setEnabled(true);
 
 		if (userDao.save(muser) == true) {
 

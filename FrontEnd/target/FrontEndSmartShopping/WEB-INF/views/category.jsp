@@ -39,7 +39,7 @@
 		
 	
 		
-		<form:form action="${addAction}" modelAttribute="category">
+		<form:form action="${addAction}" commandName="category" role="form">
 			<table class="table table-condensed">
 				<tr>
 					<td><form:label path="cid">	<spring:message text="Category ID" /></form:label></td>

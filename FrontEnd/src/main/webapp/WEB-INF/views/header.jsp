@@ -43,7 +43,7 @@
         <li><a href="${contextRoot}/Admin">Manage</a></li>
         </security:authorize>
         <security:authorize access="hasRole('USER')">
-        <li><a href="${contextRoot}/cart/show"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        <li><a href="${contextRoot}/cart/myCart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
           <li><a href="${contextRoot}/productlist"> View Products</a></li>
         </security:authorize>
       </ul>
