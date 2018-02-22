@@ -117,6 +117,7 @@ mproduct.setCategory_id(category.getCid());
 		System.out.println("editCategory");
 		model.addAttribute("product", this.productDao.getProductByID(id));
 		model.addAttribute("listProduct", this.productDao.listProducts());
+		model.addAttribute("categoryList", categoryDao.listCategories());
 		return "product";
 	}
 	

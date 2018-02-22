@@ -60,7 +60,7 @@
   </div>
      
 </div>
-	</c:if>
+	</c:if><form:form action="${contextRoot}/cart/checkout/${sum}">
 	
     				<thead>
 						<tr>
@@ -76,7 +76,7 @@
 						<tr>
 							<td data-th="Product">
 								<div class="row">
-									<div class="col-sm-2 hidden-xs"><img src="<c:url value="images/${cart.p_id}.jpg"/>" width="150" height="100"></img></div>
+									<div class="col-sm-2 hidden-xs"><img src="<c:url value="/images/${cart.p_id}.jpg"/>" width="150" height="100"></img></div>
 									<div class="col-sm-10">
 										<h4 class="nomargin">${cart.p_name}</h4>
 										<p></p>
@@ -103,9 +103,11 @@
 							<td><a href="${contextRoot}/home" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
 							<td colspan="2" class="hidden-xs"></td>
 							<td class="hidden-xs text-center"><strong>Total ${sum}</strong></td>
+							
 							<td><a href="${contextRoot}/cart/checkout/${sum}" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
 						</tr>
 					</tfoot>
+					</form:form>
 					
 				</table>
 </div>

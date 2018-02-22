@@ -103,7 +103,8 @@
 							<td><a href="${contextRoot}/home" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
 							<td colspan="2" class="hidden-xs"></td>
 							<td class="hidden-xs text-center"><strong>Total ${sum}</strong></td>
-							<td><a href="" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+							
+							<td><a href="${contextRoot}/cart/checkout/${sum}" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
 						</tr>
 					</tfoot>
 					</form:form>

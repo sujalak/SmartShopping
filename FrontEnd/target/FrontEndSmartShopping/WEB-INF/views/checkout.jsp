@@ -120,25 +120,36 @@ span.price {
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form :form action="${contextRoot}/cart/invoice">
+      <form:form action="${contextRoot}/cart/invoice"  modelAttribute="address" method="post">
       
         <div class="row">
           <div class="col-50">
             <h4>Billing Address</h4>
-            
-            <label for="adr">Address</label>
-            <form:input type="textArea" path="address" placeholder="Enter Address" required="true"/>
+           
+            <label for="addressLineOne"">Address</label>
+           <form:input type="text" path="addressLineOne" placeholder="Enter Address Line One" />
+           
+               <label for="adr">Address</label>
+         <form:input type="text" path="addressLineTwo" class="form-control"	placeholder="Enter Address Line Two" />
             <label for="city">City</label>
-            <form:input type="text" id="city" path="city" placeholder="New York" required="true"/>
-
+         <form:input type="text" path="city" class="form-control"
+										placeholder="Enter City Name" />
             <div class="row">
               <div class="col-50">
                 <label for="state">State</label>
-                <form:input type="text" id="state" path="state" placeholder="NY" required="true"/>
+                <form:input type="text" path="state" class="form-control"
+										placeholder="Enter State Name" />
               </div>
+               
+              <div class="col-50">
+              <label for="country">Country</label>
+              <form:input type="text" path="country" class="form-control" placeholder="Enter Country Name" />
+              </div>
+            
               <div class="col-50">
                 <label for="pin">Pin Code</label>
-                <form:input type="number" path="pin" placeholder="Enter Pin Code" required="true"/>
+                <form:input type="text" path="postalCode" class="form-control"
+										placeholder="XXXXXX" />
               </div>
             </div>
           </div>
@@ -188,7 +199,7 @@ span.price {
           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
         </label>
         <input type="submit" value="Continue to checkout" class="btn">
-      </form>
+      </form:form>
     </div>
   </div>
   </div>

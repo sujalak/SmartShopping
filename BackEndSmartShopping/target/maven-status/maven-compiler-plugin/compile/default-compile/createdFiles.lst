@@ -18,3 +18,4 @@ com\niit\Model\Product.class
 com\niit\DaoImpl\CartDaoImpl.class
 com\niit\config\HibernateConfig.class
 com\niit\DaoImpl\CategoryDaoImpl.class
+com\niit\Model\Address.class

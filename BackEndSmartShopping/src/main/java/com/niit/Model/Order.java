@@ -1,75 +1,70 @@
 package com.niit.Model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
+
 @Component
 @Entity
-@Table(name="OrderItem")
+@Table(name = "OrderDetail")
 public class Order implements Serializable {
-	 @Id
-	  
-	  @GeneratedValue(strategy=GenerationType.IDENTITY)
-	 private int id;
-	 private String u_id;
-	  private String address;
-	  private String city;
-	  private String state;
-	  private String pin;
-	  private Float totalBill;
-	public Float getTotalBill() {
-		return totalBill;
-	}
-	public void setTotalBill(Float totalBill) {
-		this.totalBill = totalBill;
-	}
+	@Id
+
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private User user;
+	private Address shipping;
+	private Address billing;
+	private Float totalBill;
+	private Date orderDate;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	
-	public String getAddress() {
-		return address;
+	public User getUser() {
+		return user;
 	}
-	public String getU_id() {
-		return u_id;
-	}
-	public void setU_id(String u_id) {
-		this.u_id = u_id;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
-	public String getState() {
-		return state;
+	public Address getShipping() {
+		return shipping;
 	}
-	public void setState(String state) {
-		this.state = state;
+	public void setShipping(Address shipping) {
+		this.shipping = shipping;
 	}
-	public String getPin() {
-		return pin;
+	public Address getBilling() {
+		return billing;
 	}
-	public void setPin(String pin) {
-		this.pin = pin;
+	public void setBilling(Address billing) {
+		this.billing = billing;
 	}
-	  
-	  
-	  
-	  
+	public Float getTotalBill() {
+		return totalBill;
+	}
+	public void setTotalBill(Float totalBill) {
+		this.totalBill = totalBill;
+	}
+	public Date getOrderDate() {
+		return orderDate;
+	}
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
+	}
+	
+
 }

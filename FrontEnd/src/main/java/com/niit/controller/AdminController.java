@@ -58,10 +58,13 @@ public class AdminController {
 		
 	@RequestMapping("/productAdd")
 	public ModelAndView showProduct(Model model) {
-		model.addAttribute("product",new Product());
-		
 		
 		ModelAndView mv = new ModelAndView("product");
+		mv.addObject("product", product);
+		
+		mv.addObject("categoryList", categoryDao.listCategories());
+		mv.addObject("supplier", supplier);
+		mv.addObject("supplierList", supplierDao.listSupplier());
 		return mv;
 		
 	

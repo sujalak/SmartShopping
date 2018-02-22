@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.niit.TestCase.ProductTestCase" time="0.025" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\bin"/>
+    <property name="java.vm.version" value="25.45-b02"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Project(SmartShopping)\BackEndSmartShopping"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Project(SmartShopping)\BackEndSmartShopping"/>
+    <property name="java.runtime.version" value="1.8.0_45-b15"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\MRuser\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="classworlds.conf" value="D:\Project(SmartShopping)\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5714848293224386234.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_45/bin/server;C:/Program Files/Java/jre1.8.0_45/bin;C:/Program Files/Java/jre1.8.0_45/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\jZip;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;D:\Softwares\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.3"/>
+    <property name="user.home" value="C:\Users\MRuser"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="MRuser"/>
+    <property name="java.class.path" value="D:\Softwares\eclipse\plugins\org.eclipse.m2e.maven.runtime_1.8.2.20171007-0216\jars\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_45\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean compile install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_45"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\Project(SmartShopping)\BackEndSmartShopping\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.niit.TestCase.ProductTestCase" name="insertProductTestCase" time="0.025">
+    <error message="Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; nested exception is org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1" type="org.springframework.orm.hibernate5.HibernateOptimisticLockingFailureException">org.springframework.orm.hibernate5.HibernateOptimisticLockingFailureException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; nested exception is org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.springframework.orm.hibernate5.SessionFactoryUtils.convertHibernateAccessException(SessionFactoryUtils.java:283)
+	at org.springframework.orm.hibernate5.HibernateTransactionManager.convertHibernateAccessException(HibernateTransactionManager.java:755)
+	at org.springframework.orm.hibernate5.HibernateTransactionManager.doCommit(HibernateTransactionManager.java:594)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:761)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:730)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:518)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:292)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy43.insertProduct(Unknown Source)
+	at com.niit.TestCase.ProductTestCase.insertProductTestCase(ProductTestCase.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:67)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:54)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46)
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3198)
+	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3077)
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3457)
+	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:145)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:589)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:463)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:337)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1437)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:493)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3207)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2413)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:156)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$100(JdbcResourceLocalTransactionCoordinatorImpl.java:38)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:231)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:68)
+	at org.springframework.orm.hibernate5.HibernateTransactionManager.doCommit(HibernateTransactionManager.java:582)
+	... 39 more
+</error>
+    <system-out>inn properties
+session
+Hibernate: drop table Address if exists
+Hibernate: drop table Cart if exists
+Hibernate: drop table Category if exists
+Hibernate: drop table OrderDetail if exists
+Hibernate: drop table Product if exists
+Hibernate: drop table Supplier if exists
+Hibernate: drop table User if exists
+Hibernate: create table Address (id integer generated by default as identity, address_line_one varchar(255), address_line_two varchar(255), is_billing boolean, city varchar(255), country varchar(255), postal_code varchar(255), is_shipping boolean, state varchar(255), user_email varchar(255), primary key (id))
+Hibernate: create table Cart (id integer generated by default as identity, p_id integer not null, p_name varchar(255), price float, quantity integer not null, status varchar(255), u_id varchar(255), primary key (id))
+Hibernate: create table Category (cid varchar(255) not null, cname varchar(255), primary key (cid))
+Hibernate: create table OrderDetail (id integer generated by default as identity, billing binary(255), orderDate timestamp, shipping binary(255), totalBill float, user_id varchar(255), primary key (id))
+Hibernate: create table Product (pid integer generated by default as identity, category_id varchar(255), description varchar(255), pname varchar(255), price float, stock integer, supplier_id varchar(255), primary key (pid))
+Hibernate: create table Supplier (sid varchar(255) not null, supplierName varchar(255), primary key (sid))
+Hibernate: create table User (email varchar(255) not null, address varchar(255), enabled boolean not null, name varchar(255), password varchar(255), phone varchar(255), role varchar(255), primary key (email))
+Hibernate: alter table Address add constraint FKm91a54sna1y5n0sqrwb6wrtef foreign key (user_email) references User
+Hibernate: alter table OrderDetail add constraint FKh0fgrwm9lf778hotpt19eyox4 foreign key (user_id) references User
+Hibernate: alter table Product add constraint FKexqqeaksnmmku5py194ywp140 foreign key (category_id) references Category
+Hibernate: alter table Product add constraint FK11uleikow9eaenolp88xnaudd foreign key (supplier_id) references Supplier
+supplier dao
+successfully saved
+Hibernate: update Product set category_id=?, description=?, pname=?, price=?, stock=?, supplier_id=? where pid=?
+</system-out>
+    <system-err>Feb 22, 2018 4:11:54 PM org.springframework.context.annotation.AnnotationConfigApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7c75db8b: startup date [Thu Feb 22 16:11:54 IST 2018]; root of context hierarchy
+Feb 22, 2018 4:11:54 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;supplierDao&apos; with a different definition: replacing [Generic bean: class [com.niit.DaoImpl.SupplierDaoImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\Project(SmartShopping)\BackEndSmartShopping\target\classes\com\niit\DaoImpl\SupplierDaoImpl.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=hibernateConfig; factoryMethodName=getSupplierData; initMethodName=null; destroyMethodName=(inferred); defined in com.niit.config.HibernateConfig]
+Feb 22, 2018 4:11:54 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;categoryDao&apos; with a different definition: replacing [Generic bean: class [com.niit.DaoImpl.CategoryDaoImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\Project(SmartShopping)\BackEndSmartShopping\target\classes\com\niit\DaoImpl\CategoryDaoImpl.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=hibernateConfig; factoryMethodName=getCategoryData; initMethodName=null; destroyMethodName=(inferred); defined in com.niit.config.HibernateConfig]
+Feb 22, 2018 4:11:54 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;productDao&apos; with a different definition: replacing [Generic bean: class [com.niit.DaoImpl.ProductDaoImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\Project(SmartShopping)\BackEndSmartShopping\target\classes\com\niit\DaoImpl\ProductDaoImpl.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=hibernateConfig; factoryMethodName=getProductData; initMethodName=null; destroyMethodName=(inferred); defined in com.niit.config.HibernateConfig]
+Feb 22, 2018 4:11:54 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;cartDao&apos; with a different definition: replacing [Generic bean: class [com.niit.DaoImpl.CartDaoImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\Project(SmartShopping)\BackEndSmartShopping\target\classes\com\niit\DaoImpl\CartDaoImpl.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=hibernateConfig; factoryMethodName=getCartData; initMethodName=null; destroyMethodName=(inferred); defined in com.niit.config.HibernateConfig]
+Feb 22, 2018 4:11:54 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;orderDao&apos; with a different definition: replacing [Generic bean: class [com.niit.DaoImpl.OrderDaoImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\Project(SmartShopping)\BackEndSmartShopping\target\classes\com\niit\DaoImpl\OrderDaoImpl.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=hibernateConfig; factoryMethodName=getOrderData; initMethodName=null; destroyMethodName=(inferred); defined in com.niit.config.HibernateConfig]
+Feb 22, 2018 4:11:54 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.h2.Driver
+Feb 22, 2018 4:11:54 PM org.hibernate.dialect.Dialect &lt;init&gt;
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Feb 22, 2018 4:11:54 PM org.hibernate.tool.schema.internal.SchemaCreatorImpl applyImportSources
+INFO: HHH000476: Executing import script &apos;org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4ee33af7&apos;
+Feb 22, 2018 4:11:54 PM org.springframework.orm.hibernate5.HibernateTransactionManager afterPropertiesSet
+INFO: Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@629adce] of Hibernate SessionFactory for HibernateTransactionManager
+Feb 22, 2018 4:11:54 PM org.hibernate.internal.ExceptionMapperStandardImpl mapManagedFlushFailure
+ERROR: HHH000346: Error during managed flush [Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1]
+Feb 22, 2018 4:11:54 PM org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl release
+INFO: HHH000010: On release of batch it still contained JDBC statements
+</system-err>
+  </testcase>
+</testsuite>

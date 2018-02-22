@@ -32,13 +32,7 @@ public class OrderTestCase {
 
 	@Test
 	public void insertCartTestCase() {
-		order.setAddress("mysore");
-		order.setCity("mysore");
-		order.setPin("98756");
-		order.setState("KAR");
-		order.setTotalBill(800.0f);
-		order.setU_id("hh@gmail.com");
-		System.out.println("ordertestcase");
+		
 		boolean flag = orderDao.insertOrder(order);
 
 		Assert.assertEquals("insertCartTestCase", true, flag);

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="5" failures="1" name="com.niit.TestCase.SupplierTestCase" time="0.721" errors="0" skipped="3">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\bin"/>
+    <property name="java.vm.version" value="25.45-b02"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Project(SmartShopping)\BackEndSmartShopping"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Project(SmartShopping)\BackEndSmartShopping"/>
+    <property name="java.runtime.version" value="1.8.0_45-b15"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\MRuser\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="classworlds.conf" value="D:\Project(SmartShopping)\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5714848293224386234.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_45/bin/server;C:/Program Files/Java/jre1.8.0_45/bin;C:/Program Files/Java/jre1.8.0_45/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\jZip;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;D:\Softwares\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.3"/>
+    <property name="user.home" value="C:\Users\MRuser"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="MRuser"/>
+    <property name="java.class.path" value="D:\Softwares\eclipse\plugins\org.eclipse.m2e.maven.runtime_1.8.2.20171007-0216\jars\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_45\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean compile install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_45"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\Project(SmartShopping)\BackEndSmartShopping\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.niit.TestCase.SupplierTestCase" name="getSupplierTestCase" time="0.265">
+    <skipped/>
+    <system-out>inn properties
+session
+Hibernate: drop table Address if exists
+Hibernate: drop table Cart if exists
+Hibernate: drop table Category if exists
+Hibernate: drop table OrderDetail if exists
+Hibernate: drop table Product if exists
+Hibernate: drop table Supplier if exists
+Hibernate: drop table User if exists
+Hibernate: create table Address (id integer generated by default as identity, address_line_one varchar(255), address_line_two varchar(255), is_billing boolean, city varchar(255), country varchar(255), postal_code varchar(255), is_shipping boolean, state varchar(255), user_email varchar(255), primary key (id))
+Hibernate: create table Cart (id integer generated by default as identity, p_id integer not null, p_name varchar(255), price float, quantity integer not null, status varchar(255), u_id varchar(255), primary key (id))
+Hibernate: create table Category (cid varchar(255) not null, cname varchar(255), primary key (cid))
+Hibernate: create table OrderDetail (id integer generated by default as identity, billing binary(255), orderDate timestamp, shipping binary(255), totalBill float, user_id varchar(255), primary key (id))
+Hibernate: create table Product (pid integer generated by default as identity, category_id varchar(255), description varchar(255), pname varchar(255), price float, stock integer, supplier_id varchar(255), primary key (pid))
+Hibernate: create table Supplier (sid varchar(255) not null, supplierName varchar(255), primary key (sid))
+Hibernate: create table User (email varchar(255) not null, address varchar(255), enabled boolean not null, name varchar(255), password varchar(255), phone varchar(255), role varchar(255), primary key (email))
+Hibernate: alter table Address add constraint FKm91a54sna1y5n0sqrwb6wrtef foreign key (user_email) references User
+Hibernate: alter table OrderDetail add constraint FKh0fgrwm9lf778hotpt19eyox4 foreign key (user_id) references User
+Hibernate: alter table Product add constraint FKexqqeaksnmmku5py194ywp140 foreign key (category_id) references Category
+Hibernate: alter table Product add constraint FK11uleikow9eaenolp88xnaudd foreign key (supplier_id) references Supplier
+supplier dao
+init
+</system-out>
+    <system-err>Feb 22, 2018 4:11:54 PM org.springframework.context.annotation.AnnotationConfigApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@747d1932: startup date [Thu Feb 22 16:11:54 IST 2018]; root of context hierarchy
+Feb 22, 2018 4:11:54 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;supplierDao&apos; with a different definition: replacing [Generic bean: class [com.niit.DaoImpl.SupplierDaoImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\Project(SmartShopping)\BackEndSmartShopping\target\classes\com\niit\DaoImpl\SupplierDaoImpl.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=hibernateConfig; factoryMethodName=getSupplierData; initMethodName=null; destroyMethodName=(inferred); defined in com.niit.config.HibernateConfig]
+Feb 22, 2018 4:11:54 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;categoryDao&apos; with a different definition: replacing [Generic bean: class [com.niit.DaoImpl.CategoryDaoImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\Project(SmartShopping)\BackEndSmartShopping\target\classes\com\niit\DaoImpl\CategoryDaoImpl.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=hibernateConfig; factoryMethodName=getCategoryData; initMethodName=null; destroyMethodName=(inferred); defined in com.niit.config.HibernateConfig]
+Feb 22, 2018 4:11:54 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;productDao&apos; with a different definition: replacing [Generic bean: class [com.niit.DaoImpl.ProductDaoImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\Project(SmartShopping)\BackEndSmartShopping\target\classes\com\niit\DaoImpl\ProductDaoImpl.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=hibernateConfig; factoryMethodName=getProductData; initMethodName=null; destroyMethodName=(inferred); defined in com.niit.config.HibernateConfig]
+Feb 22, 2018 4:11:54 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;cartDao&apos; with a different definition: replacing [Generic bean: class [com.niit.DaoImpl.CartDaoImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\Project(SmartShopping)\BackEndSmartShopping\target\classes\com\niit\DaoImpl\CartDaoImpl.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=hibernateConfig; factoryMethodName=getCartData; initMethodName=null; destroyMethodName=(inferred); defined in com.niit.config.HibernateConfig]
+Feb 22, 2018 4:11:54 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;orderDao&apos; with a different definition: replacing [Generic bean: class [com.niit.DaoImpl.OrderDaoImpl]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\Project(SmartShopping)\BackEndSmartShopping\target\classes\com\niit\DaoImpl\OrderDaoImpl.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=hibernateConfig; factoryMethodName=getOrderData; initMethodName=null; destroyMethodName=(inferred); defined in com.niit.config.HibernateConfig]
+Feb 22, 2018 4:11:54 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.h2.Driver
+Feb 22, 2018 4:11:54 PM org.hibernate.dialect.Dialect &lt;init&gt;
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Feb 22, 2018 4:11:54 PM org.hibernate.tool.schema.internal.SchemaCreatorImpl applyImportSources
+INFO: HHH000476: Executing import script &apos;org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4ee33af7&apos;
+Feb 22, 2018 4:11:54 PM org.springframework.orm.hibernate5.HibernateTransactionManager afterPropertiesSet
+INFO: Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@3db663d0] of Hibernate SessionFactory for HibernateTransactionManager
+</system-err>
+  </testcase>
+  <testcase classname="com.niit.TestCase.SupplierTestCase" name="insertSupplierTestCase" time="0.006"/>
+  <testcase classname="com.niit.TestCase.SupplierTestCase" name="listSupplierTestCase" time="0.15">
+    <failure message="listSupplierTestCase expected:&lt;4&gt; but was:&lt;1&gt;" type="java.lang.AssertionError">java.lang.AssertionError: listSupplierTestCase expected:&lt;4&gt; but was:&lt;1&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at com.niit.TestCase.SupplierTestCase.listSupplierTestCase(SupplierTestCase.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>Hibernate: select supplier0_.sid as sid1_5_, supplier0_.supplierName as supplier2_5_ from Supplier supplier0_
+Hibernate: select products0_.supplier_id as supplier7_4_0_, products0_.pid as pid1_4_0_, products0_.pid as pid1_4_1_, products0_.category_id as category2_4_1_, products0_.description as descript3_4_1_, products0_.pname as pname4_4_1_, products0_.price as price5_4_1_, products0_.stock as stock6_4_1_, products0_.supplier_id as supplier7_4_1_, category1_.cid as cid1_2_2_, category1_.cname as cname2_2_2_ from Product products0_ inner join Category category1_ on products0_.category_id=category1_.cid where products0_.supplier_id=?
+</system-out>
+    <system-err>Feb 22, 2018 4:11:54 PM org.hibernate.hql.internal.QueryTranslatorFactoryInitiator initiateService
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+</system-err>
+  </testcase>
+  <testcase classname="com.niit.TestCase.SupplierTestCase" name="deleteSupplierTestCase" time="0.15">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.niit.TestCase.SupplierTestCase" name="updateSupplierTestCase" time="0.15">
+    <skipped/>
+  </testcase>
+</testsuite>

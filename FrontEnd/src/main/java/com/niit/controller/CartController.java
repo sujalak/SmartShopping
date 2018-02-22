@@ -19,11 +19,14 @@ import com.niit.Dao.CategoryDao;
 import com.niit.Dao.OrderDao;
 import com.niit.Dao.ProductDao;
 import com.niit.Dao.SupplierDao;
+import com.niit.Dao.UserDao;
+import com.niit.Model.Address;
 import com.niit.Model.Cart;
 import com.niit.Model.Category;
 import com.niit.Model.Order;
 import com.niit.Model.Product;
 import com.niit.Model.Supplier;
+import com.niit.Model.User;
 
 @Controller
 @RequestMapping("/cart")
@@ -34,10 +37,19 @@ public class CartController {
 	@Autowired
 	private Cart cart;
 	@Autowired
-	private OrderDao orderDao;
+	private UserDao userDao;
 
 	@Autowired
+	private User user;
+	
+	@Autowired
 	private Order order;
+	
+	@Autowired
+	private OrderDao orderDao;
+	
+	@Autowired
+	private Address address;
 	@Autowired
 	CategoryDao categoryDao;
 	@Autowired
@@ -46,11 +58,23 @@ public class CartController {
 	@Autowired
 	private Product product;
 
-	@RequestMapping("/checkout")
-	public ModelAndView showCart() {
+	@RequestMapping(value="/checkout/{sum}", method = RequestMethod.GET)
+	public ModelAndView showCheckout(@PathVariable("sum") float total, HttpServletRequest request, Principal principal) {
+		
 		ModelAndView mv = new ModelAndView("checkout");
+		mv.addObject("address",new Address());
+		user=userDao.getUser(principal.getName());
+		order.setUser(user);
+		order.setTotalBill(total);
 		mv.addObject("isUserClickedCheckOut", "true");
 		return mv;
+	}
+	
+	@RequestMapping(value ="/invoice", method = RequestMethod.POST)
+	public ModelAndView showInvoice() {
+		
+		ModelAndView mv = new ModelAndView("invoice");
+			return mv;
 	}
 
 	@RequestMapping(value = "/Add/{pid}", method = RequestMethod.GET)
@@ -113,24 +137,28 @@ public class CartController {
 
 	}
 
-	@RequestMapping(value = "/invoice/{sum}", method = RequestMethod.GET)
-	public String addtoOrder(@PathVariable("sum") float total, @ModelAttribute("order") Order norder,
+	@RequestMapping(value = "/checkout", method = RequestMethod.POST)
+	public String addAddress(@ModelAttribute("address") Address address,
 			HttpServletRequest request, Principal principal, Model model) {
 
-		norder.setTotalBill(total);
-		norder.setU_id(principal.getName());
-		if (orderDao.insertOrder(norder) == true) {
-
-			model.addAttribute("msg", "Successfully created/updated the caetgory");
+		
+		if (userDao.addAddress(address)==true) {
+            order.setShipping(address);
+            order.setBilling(address);
+           if(orderDao.insertOrder(order)==true) {
+            
+			model.addAttribute("msg", "Successfully created/updated the order");
 		} else {
-			model.addAttribute("msg", "not able created/updated the caetgory");
+			model.addAttribute("msg", "not able created/updated the order");
 		}
+		}
+		model.addAttribute("Address", address);
 
-		model.addAttribute("order", norder);
-
-		return "redirect:invoice";
+		return "/invoice";
 
 	}
+	
+	
 
 }
 

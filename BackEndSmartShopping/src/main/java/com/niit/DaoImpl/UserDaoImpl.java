@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.niit.Dao.UserDao;
+import com.niit.Model.Address;
 import com.niit.Model.User;
 
 @Transactional
@@ -46,6 +47,18 @@ public class UserDaoImpl implements UserDao {
 			return false;
 		}
 
+	}
+	
+	
+	@Override
+	public User getUser(String email) {
+		try {			
+			return sessionFactory.getCurrentSession().get(User.class, email);			
+		}
+		catch(Exception ex) {
+			System.out.println(ex.getMessage());
+			return null;
+		}
 	}
 
 	public List<User> getUsers() {
@@ -83,4 +96,67 @@ public class UserDaoImpl implements UserDao {
 		}
 	}
 
+	@Override
+	public boolean addAddress(Address address) {
+		try {
+			getCurrentSession().save(address);
+
+			System.out.println("successfully  address created");
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	public Address getBillingAddress(User user) {
+		String selectQuery = "FROM Address WHERE user = :userAND billing = :isBilling";
+		try{
+		return getCurrentSession().createQuery(selectQuery,Address.class).setParameter("user ", user)
+						.setParameter("isBilling", true)
+						.getSingleResult();
+		}
+		catch(Exception ex) {
+			return null;
+		}
+	}
+
+	@Override
+	public List<Address> listShippingAddress(User user) {
+		String selectQuery = "FROM Address WHERE user_email = :email AND shipping = :isShipping";
+		try{
+		return getCurrentSession().createQuery(selectQuery,Address.class).setParameter("user", user)
+						.setParameter("isShipping", true)
+						.getResultList();
+		}
+		catch(Exception ex) {
+			return null;
+		}
+
+}
+	/*@Override
+	public Address getBillingAddress(String email) {
+		String selectQuery = "FROM Address WHERE user_email = :email AND billing = :isBilling";
+		try{
+		return getCurrentSession().createQuery(selectQuery,Address.class).setParameter("user_email ", email)
+						.setParameter("isBilling", true)
+						.getSingleResult();
+		}
+		catch(Exception ex) {
+			return null;
+		}
+	}
+
+	@Override
+	public List<Address> listShippingAddress(String email) {
+		String selectQuery = "FROM Address WHERE user_email = :email AND shipping = :isShipping";
+		try{
+		return getCurrentSession().createQuery(selectQuery,Address.class).setParameter("user_email", email)
+						.setParameter("isShipping", true)
+						.getResultList();
+		}
+		catch(Exception ex) {
+			return null;
+		}
+
+}*/
 }

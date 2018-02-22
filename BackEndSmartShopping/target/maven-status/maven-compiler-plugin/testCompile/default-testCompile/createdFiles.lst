@@ -1,0 +1,7 @@
+com\niit\TestCase\UserTestCase.class
+com\niit\TestCase\CategoryTestCase.class
+com\niit\TestCase\ProductTestCase.class
+com\niit\TestCase\SupplierTestCase.class
+com\niit\TestCase\OrderTestCase.class
+com\niit\TestCase\CartTestCase.class
+com\niit\BackEndSmartShopping\AppTest.class

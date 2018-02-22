@@ -2,6 +2,7 @@ package com.niit.Dao;
 
 import java.util.List;
 
+import com.niit.Model.Address;
 import com.niit.Model.User;
 
 public interface UserDao {
@@ -24,5 +25,11 @@ public interface UserDao {
 	// delete user by user
 
 	public boolean delete(User user);
+	
+	public boolean addAddress(Address address);
+	Address getBillingAddress(User user);
+	List<Address> listShippingAddress(User user);
+
+	User getUser(String email);
 
 }
